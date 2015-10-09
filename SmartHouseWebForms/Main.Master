@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="SmartHouseWebForms.Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Content/MyStyle.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 ml-45">
+                <asp:Panel runat="server" ID="panHouse">
+                </asp:Panel>
+                <br />
+            </div>
+            <div class="col-md-3 headerSmart">
+                <asp:Panel runat="server" ID="Panel1">
+                    <img src="Images/12.png" style="margin-top: 50%; margin-left: -25px" />
+                    <img src="Images/фон3.png" style="margin-top: 60px; margin-left: -55px; width: 160%" />
+                </asp:Panel>
+                <br />
+            </div>
+            <div class="col-md-4 tools">
+                <asp:Menu ID="Menu1" CssClass="menu" runat="server" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Домой" Value="Домой" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Редактировать" Value="Редактировать" NavigateUrl="~/RedactDevice.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Добавить" Value="Добавить" NavigateUrl="~/AddDevice.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Удалить" Value="Удалить" NavigateUrl="~/delDevice.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#5D7B9D" ForeColor="White" />
+                </asp:Menu>
+                <asp:ContentPlaceHolder ID="cphTools" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+    </form>
+</body>
+</html>
